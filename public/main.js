@@ -1,4 +1,4 @@
-const socket = io("http://localhost:5000");
+const socket = io("https://group-chat-roan.vercel.app/");
 const clientsTotal = document.getElementById('clients-total');
 const messageContainer = document.getElementById('message-container');
 const nameInput = document.getElementById('name-input'); // FIXED
