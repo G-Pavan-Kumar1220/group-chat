@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat app</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-<paste-correct-hash-here>"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Your custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">Group Chat</h1>
+
+  <div class="main">
+    <!-- Name input -->
+    <div class="name">
+      <span><i class="far fa-user"></i></span>
+      <input type="text" id="name-input" class="name-input"
+             value="anonymous" maxlength="20">
+    </div>
+
+    <!-- Messages -->
+    <ul class="message-container" id="message-container">
+      <li class="message-left">
+        <p class="message">
+          Lorem ipsum dolor
+          <span>blueird 26 july 10:40</span>
+        </p>
+      </li>
+      <li class="message-right">
+        <p class="message">
+          Lorem ipsum dolor
+          <span>blueird 26 july 10:40</span>
+        </p>
+      </li>
+      <!-- Single reusable feedback element -->
+      <li class="message-feedback" id="feedback-container" style="display:none;">
+        <p class="feedback" id="feedback">person is typing...</p>
+      </li>
+    </ul>
+
+    <!-- Message form -->
+    <form class="message-form" id="message-form">
+      <input type="text" name="message" id="message-input" class="message-input">
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">
+        send <span><i class="fas fa-paper-plane"></i></span>
+      </button>
+    </form>
+  </div>
+
+  <!-- Clients total -->
+  <h3 class="clients-total" id="clients-total">total clients</h3>
+
+  <!-- Socket.IO -->
+  <script src="/socket.io/socket.io.js"></script>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"
+          integrity="sha512-QoJS4DOhdmG8kbbHkxmB/rtPdN62cGWXAdAFWWJPvUFF1/zxcPSdAnn4HhYZSIlVoLVEJ0LesfNlusgm2bPfnA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Your app logic -->
+  <script src="main.js"></script>
+</body>
+</html>
